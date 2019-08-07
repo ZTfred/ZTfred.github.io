@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[VLAN虚拟局域网]]></title>
     <url>%2F2019%2F08%2F04%2FVLAN%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91%2F</url>
-    <content type="text"><![CDATA[一.作用可以隔离广播域 二.效果相同vlan可以通信，不同vlan不可通信。 注意判断是否在同一vlan，需要看vlan的ID。 三.管理设备 连线 进入电脑终端 配置设备 &gt; | 用户模式 | 用于登录设备 | 可使用enable进入下一个模式 # | 特权模式 | 用于查询设备配置 | 可使用configure terminal进入下一个模式 (config)# | 全局模式 | 用于配置设备 | 进行的配置对这个设备生效 四.步骤 添加vlan虚拟局域网 12(config)# vlan2​ 1234562. 进入终端设备对应端口 ```bash (config)# interface fastEthernet 0/1 ​ 1234563. 在端口中调用对应vlan ```bash (config-if)# switchport access vlan 2 ​ 1234564. 退回上级模式 ```bash exit ​ #### **tips** vlan 原理：进入端口贴上标签，出端口前判断标签，出端口后摘掉标签。]]></content>
+    <content type="text"><![CDATA[一.作用可以隔离广播域 二.效果相同vlan可以通信，不同vlan不可通信。 注意判断是否在同一vlan，需要看vlan的ID。 三.管理设备 连线 进入电脑终端 配置设备 符号 模式 作用 进一步 &gt; 用户模式 用于登录设备 可使用enable进入下一个模式 # 特权模式 用于查询设备配置 可使用configure terminal进入下一个模式 (config)# 全局模式 用于配置设备 进行的配置对这个设备生效 四.步骤 添加vlan虚拟局域网 1(config)# vlan2 进入终端设备对应端口 1(config)# interface fastEthernet 0/1 在端口中调用对应vlan 1(config-if)# switchport access vlan 2 退回上级模式 1exit tipsvlan 原理：进入端口贴上标签，出端口前判断标签，出端口后摘掉标签。]]></content>
       <tags>
         <tag>网络</tag>
       </tags>
