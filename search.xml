@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[交换机原理]]></title>
+    <url>%2F2019%2F08%2F07%2F%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[OSI七层模型]]></title>
+    <url>%2F2019%2F08%2F07%2FOSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[1.物理层传输媒介，在线路中起到的作用是将二进制转换成电信号或光信号。 2.数据链路层例如MAC地址。作用是相邻的两个设备之间的互相通信。 3.网络层IP地址。作用是寻址，让数据包找到最终地址。 4.传输层TCP/UDP。用于建立以及断开链接。 5.会话层传输层的领导，管理传输层的建立连接和断开。 6.表示层将应用层协议翻译成电脑可识别的语言，如UTF-8。 7.应用层每个网络应用，都对应不同的协议，这些协议属于应用层。 tips数据在发送时，由第七层至第一层进行封装，目标在收到数据包后，由第一层至第一层解封。]]></content>
+      <tags>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[网段]]></title>
+    <url>%2F2019%2F08%2F07%2F%E7%BD%91%E6%AE%B5%2F</url>
+    <content type="text"></content>
+  </entry>
+</search>
