@@ -16,66 +16,8 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="header" style="background-image: url(/images/dingbu.png)"><nav class="header-nav"><div class="header-nav-inner"><div class="fa fa-bars header-nav-menu-icon"></div><div class="header-nav-menu"><span><a href="/"><i class="fa fa-home"></i>Home</a></span><span><a href="/archives/"><i class="fa fa-folder-open"></i>Archives</a></span><span><a href="/categories/"><i class="fa fa-th"></i>Categories</a></span><span><a href="/tags/"><i class="fa fa-tags"></i>Tags</a></span><span><a href="/about/"><i class="fa fa-user"></i>About</a></span></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">生活</div><div class="header-info-subtitle"></div></div></div></header><main id="main"><div class="main-inner"><aside id="sidebar"><div class="sidebar-inner"><section class="hide sidebar-toc"></section><section class="sidebar-overview"><div class="sidebar-author"><img class="sidebar-author-avatar" src="/images/avatar.png" alt="avatar"><p class="sidebar-author-motto">fred</p></div><div class="sidebar-social"><span class="sidebar-social-item"><a href="https://hongmengjinshu@google.com/" target="_blank" rel="noopener" data-popover="Google" data-popover-pos="up"><i class="fa fa-google"></i></a></span><span class="sidebar-social-item"><a href="13283578602" target="_blank" rel="noopener" data-popover="Wechat" data-popover-pos="up"><i class="fa fa-weixin"></i></a></span><span class="sidebar-social-item"><a href="987828198" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><i class="fa fa-qq"></i></a></span></div><div class="sidebar-state"><span class="sidebar-state-item sidebar-state-posts"><a href="/archives/"><div class="sidebar-state-item-count">4</div><div class="sidebar-state-item-name">Archives</div></a></span><span class="sidebar-state-item sidebar-state-categories"><a href="/categories/"><div class="sidebar-state-item-count">0</div><div class="sidebar-state-item-name">Categories</div></a></span><span class="sidebar-state-item sidebar-state-tags"><a href="/tags/"><div class="sidebar-state-item-count">1</div><div class="sidebar-state-item-name">Tags</div></a></span></div><div class="sidebar-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg" alt="creative commons"></a></div></section></div></aside><div class="content home-content code-highlight"><section class="recent-posts" id="recent-posts"><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/04/VLAN虚拟局域网/">VLAN虚拟局域网</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-04</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>217</span></span></div></header><div class="post-body"><div class="post-excerpt"><h4 id="一-作用"><a href="#一-作用" class="headerlink" title="一.作用"></a>一.作用</h4><p>可以隔离广播域</p>
 <h4 id="二-效果"><a href="#二-效果" class="headerlink" title="二.效果"></a>二.效果</h4><p>相同vlan可以通信，不同vlan不可通信。  </p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>判断是否在同一vlan，需要看vlan的ID。  </p>
-<h4 id="三-管理设备"><a href="#三-管理设备" class="headerlink" title="三.管理设备"></a>三.管理设备</h4><ol>
-<li>连线</li>
-<li>进入电脑终端</li>
-<li>配置设备</li>
-</ol>
-<div style="overflow: auto"><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">模式</th>
-<th align="center">作用</th>
-<th align="center">进一步</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&gt;</td>
-<td align="center">用户模式</td>
-<td align="center">用于登录设备</td>
-<td align="center">可使用enable进入下一个模式</td>
-</tr>
-<tr>
-<td align="center">#</td>
-<td align="center">特权模式</td>
-<td align="center">用于查询设备配置</td>
-<td align="center">可使用configure terminal进入下一个模式</td>
-</tr>
-<tr>
-<td align="center">(config)#</td>
-<td align="center">全局模式</td>
-<td align="center">用于配置设备</td>
-<td align="center">进行的配置对这个设备生效</td>
-</tr>
-</tbody></table></div>
-<h4 id="四-步骤"><a href="#四-步骤" class="headerlink" title="四.步骤"></a>四.步骤</h4><ol>
-<li><p>添加vlan虚拟局域网</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config)<span class="comment"># vlan2</span></span><br></pre></td></tr></table></div></figure>
-</li>
-<li><p>进入终端设备对应端口</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config)<span class="comment"># interface fastEthernet 0/1</span></span><br></pre></td></tr></table></div></figure>
-</li>
-<li><p>在端口中调用对应vlan</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config-if)<span class="comment"># switchport access vlan 2</span></span><br></pre></td></tr></table></div></figure>
-</li>
-<li><p>退回上级模式</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></div></figure>
-
-</li>
-</ol>
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p>vlan 原理：进入端口贴上标签，出端口前判断标签，出端口后摘掉标签。</p>
-</div><div class="post-btn"><a href="2019/08/04/VLAN虚拟局域网/">Read more »</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/03/交换机原理/">arp原理</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-03</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>352</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><strong>交换设备属于二层设备，只支持MAC地址。</strong>  </p>
-<p>发送端在与接收端进行数据通信前，需要先知道对端的MAC地址，而首次通信前发送段不知道接收端的MAC地址，所以要发送一个MAC地址请求包，即arp请求包；<br>该请求包包含发送端的MAC地址，及发送端和接收端的IP地址，经由交换设备换发给接收端；<br>交换机在收到该请求包后，会检测包中包含的目标、地址信息，但目标MAC地址不可用，而IP地址不识别，故交换设备会分发该请求包；<br>除发送端之外的所有设备都会收到该请求包，非目标地址的设备会主动丢弃该请求包；<br>接受端收到请求包后，会将自身的MAC地址写入该请求包，并返回发送端；<br>数据包经由交换设备发送给原发送端，因数据包中包含原发送端的MAC地址，所以会直接转发給原发送端；<br>原发送端收到包含接收端MAC地址的请求包后，会写入本地的arp列表中，以备下次使用；<br>如不包含，则重新开始执行arp请求的过程。  </p>
-<hr>
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a><em>tips</em></h4><p>arp列表：MAC与IP地址对应列表。<br>查询命令：</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arp<span class="_">-a</span></span><br></pre></td></tr></table></div></figure>
-
-<p>清空命令：</p>
-<figure class="highlight bash"><div style="overflow: auto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arp<span class="_">-d</span></span><br></pre></td></tr></table></div></figure>
-
-</div><div class="post-btn"><a href="2019/08/03/交换机原理/">Read more »</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/02/网段/">计算网段</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-02</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>54</span></span></div></header><div class="post-body"><div class="post-excerpt"><ol>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>判断是否在同一vlan，需要看vlan的ID。  </p></div><div class="post-btn"><a href="2019/08/04/VLAN虚拟局域网/">Read more »</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/03/交换机原理/">arp原理</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-03</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>352</span></span></div></header><div class="post-body"><div class="post-excerpt"><p><strong>交换设备属于二层设备，只支持MAC地址。</strong>  </p>
+<p>发送端在与接收端进行数据通信前，需要先知道对端的MAC地址，而首次通信前发送段不知道接收端的MAC地址，所以要发送一个MAC地址请求包，即arp请求包；  </p></div><div class="post-btn"><a href="2019/08/03/交换机原理/">Read more »</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/02/网段/">计算网段</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-02</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>54</span></span></div></header><div class="post-body"><div class="post-excerpt"><ol>
 <li>将十进制转换成二进制；  </li>
 <li>将转换的IP和掩码对位相乘；  </li>
 <li>将相乘的结果转换成十进制；  </li>
@@ -84,14 +26,7 @@ window.CONFIG = CONFIG;</script></head><body><div id="container"><header id="hea
 </div><div class="post-btn"><a href="2019/08/02/网段/">Read more »</a></div></div></article><article class="post"><header class="post-header"><h1 class="post-title"><a class="post-title-link" href="2019/08/01/OSI七层模型/">OSI七层模型</a></h1><div class="post-meta"><span class="post-create"><i class="fa fa-calendar-o"></i><span>Posted </span><span>2019-08-01</span></span><span class="post-update"><i class="fa fa-calendar-check-o"></i><span>updated </span><span>2019-08-07</span></span><span class="post-word-count"><i class="fa fa-file-word-o"></i><span>Words </span><span>218</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>下图为模型结构图：</p>
 <p><img src="http://d.birdteam.net/data/f_49374697.jpg" alt="f_49374697.jpg"></p>
 <h3 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a>1.物理层</h3><p>传输媒介，在线路中起到的作用是将二进制转换成电信号或光信号。</p>
-<h3 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a>2.数据链路层</h3><p>例如MAC地址。作用是相邻的两个设备之间的互相通信。</p>
-<h3 id="3-网络层"><a href="#3-网络层" class="headerlink" title="3.网络层"></a>3.网络层</h3><p>IP地址。作用是寻址，让数据包找到最终地址。</p>
-<h3 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4.传输层"></a>4.传输层</h3><p>TCP/UDP。用于建立以及断开链接。</p>
-<h3 id="5-会话层"><a href="#5-会话层" class="headerlink" title="5.会话层"></a>5.会话层</h3><p>传输层的领导，管理传输层的建立连接和断开。</p>
-<h3 id="6-表示层"><a href="#6-表示层" class="headerlink" title="6.表示层"></a>6.表示层</h3><p>将应用层协议翻译成电脑可识别的语言，如UTF-8。</p>
-<h3 id="7-应用层"><a href="#7-应用层" class="headerlink" title="7.应用层"></a>7.应用层</h3><p>每个网络应用，都对应不同的协议，这些协议属于应用层。</p>
-<h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a><em>tips</em></h3><p>数据在发送时，由第七层至第一层进行封装，目标在收到数据包后，由第一层至第一层解封。</p>
-</div><div class="post-btn"><a href="2019/08/01/OSI七层模型/">Read more »</a></div></div></article></section><nav id="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div><div class="clearfix"></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>fred.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.2.0.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+<h3 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a>2.数据链路层</h3><p>例如MAC地址。作用是相邻的两个设备之间的互相通信。</p></div><div class="post-btn"><a href="2019/08/01/OSI七层模型/">Read more »</a></div></div></article></section><nav id="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div><div class="clearfix"></div></div></main><footer id="footer"><div class="footer-inner"><div><span>&copy; 2019</span><span class="fa fa-heart heart-beat footer-separator" style="color: #ff0000"></span><span>fred.</span></div><div><span class="footer-powered">Powered by <a href="http://hexo.io/" title="hexo" target="_blank" rel="noopener">hexo</a></span><span> v3.9.0.</span><span class="footer-separator">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="stun" target="_blank" rel="noopener">stun</a></span><span> v1.2.0.</span></div></div></footer><div id="back-top"><div class="back-top-inner" data-popover="Back to top" data-popover-pos="up"><i class="fa fa-rocket"></i></div></div></div><script>if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
   window.Promise = null;
 }
 </script><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js" color="0,0,0" opacity="0.6" count="99" zindex="-1"></script><script src="js/utils.js?v=1.2.0"></script><script src="js/stun-boot.js?v=1.2.0"></script><script src="js/copy.js?v=1.2.0"></script><script src="js/scroll.js?v=1.2.0"></script><script src="js/header.js?v=1.2.0"></script><script src="js/sidebar.js?v=1.2.0"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
