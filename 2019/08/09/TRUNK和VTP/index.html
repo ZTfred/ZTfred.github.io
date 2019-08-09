@@ -60,15 +60,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="交换设备的端口有两种模式：    access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）     trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签">
+<meta name="keywords" content="vtp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TRUNK和VTP">
+<meta property="og:url" content="http://yoursite.com/2019/08/09/TRUNK和VTP/index.html">
 <meta property="og:site_name" content="生活">
+<meta property="og:description" content="交换设备的端口有两种模式：    access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）     trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T12:34:44.475Z">
+<meta property="og:updated_time" content="2019-08-09T12:15:56.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-  <link rel="canonical" href="http://yoursite.com/categories/">
+<meta name="twitter:title" content="TRUNK和VTP">
+<meta name="twitter:description" content="交换设备的端口有两种模式：    access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）     trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签">
+  <link rel="canonical" href="http://yoursite.com/2019/08/09/TRUNK和VTP/">
 
 
 <script id="page-configurations">
@@ -76,13 +80,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>categories | 生活</title>
+  <title>TRUNK和VTP | 生活</title>
   
 
 
@@ -224,72 +228,196 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
+    <div class="reading-progress-bar"></div>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fred">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="../../../../images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生活">
+    </span>
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">categories
+        
+          <h1 class="post-title" itemprop="name headline">TRUNK和VTP
 
-</h1>
+            
+          </h1>
+        
 
-<div class="post-meta">
-  
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-09 19:40:00" itemprop="dateCreated datePublished" datetime="2019-08-09T19:40:00+08:00">2019-08-09</time>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="../../../../categories/网络课程/" itemprop="url" rel="index"><span itemprop="name">网络课程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>交换设备的端口有两种模式：  </p>
+<ul>
+<li>access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）  </li>
+</ul>
+<ul>
+<li>trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签<a id="more"></a>
+开启trunk的步骤：  </li>
+</ul>
+<ul>
+<li>选择直连两台交换设备其中一个端口，执行  <pre><code class="bash">switchport mode trunk  </code></pre>
+</li>
+</ul>
+<p>VTP（vlan trunk protocol）: vlan中继协议<br>作用：在多台交换机间同步<br>命令：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>domain | 名称 | 设置vtp的同步名称<br>mode | 模式 | 设置vtp的同步模式<br>password | 密码 | 设置vtp的同步密码<br>version | 版本 | 查看版本  </p>
+<p>模式：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>client | 客户模式 | 只能学习，不能管理<br>server | 服务模式 | 可以管理，可以发布<br>transparent | 传输模式 | 只可传输，不会学习  </p>
+
+    </div>
+	
+
+    
+    
+    
+	<div>
+	
+	<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
 
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
+	
+	</div>
         
-          <div class="category-all-page">
-            <div class="category-all-title">
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="../../../../tags/vtp/" rel="tag"># vtp</a>
+            
+          </div>
+        
+
+        
+  <div class="post-widgets">
+    <div class="social-share">
+      
+        
+          
+        
+
+        <div class="likely">
+          
+            <div class="twitter">Tweet</div>
+          
+            <div class="facebook">Share</div>
+          
+            <div class="linkedin">Link</div>
+          
+            <div class="gplus">Plus</div>
+          
+            <div class="vkontakte">Share</div>
+          
+            <div class="odnoklassniki">Class</div>
+          
+            <div class="telegram">Send</div>
+          
+            <div class="whatsapp">Send</div>
+          
+            <div class="pinterest">Pin</div>
+          
+        </div>
+      
+      
+        <div id="needsharebutton-postbottom">
+          <span class="btn">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </span>
+        </div>
+      
+    </div>
+  
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
               
+                <a href="../../04/VLAN虚拟局域网/" rel="next" title="VLAN虚拟局域网">
+                  <i class="fa fa-chevron-left"></i> VLAN虚拟局域网
+                </a>
               
-                
-                  
-                
-              
-              目前共计 1 个分类
             </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="网络课程/">网络课程</a><span class="category-list-count">2</span></li></ul>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
             </div>
           </div>
         
-      </div>
-      
-      
-      
-    </div>
+      </footer>
     
+  </div>
+  
+  
+  
+  </article>
 
-    
-    
-    
   </div>
 
 
@@ -550,10 +678,9 @@
 
 
   
-    <script src="../js/scrollspy.js?v=7.3.0"></script>
-<script src="../js/post-details.js?v=7.3.0"></script>
+  <script src="../../../../js/scrollspy.js?v=7.3.0"></script>
+<script src="../../../../js/post-details.js?v=7.3.0"></script>
 
-  
 
     
 <script>
