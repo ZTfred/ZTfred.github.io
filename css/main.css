@@ -446,6 +446,7 @@ pre {
 pre code {
   background: none;
   color: #4d4d4c;
+  font-size: 0.875em;
   padding: 0;
   text-shadow: none;
 }
@@ -1760,7 +1761,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff5474;
+  background: #f4ff5d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1781,17 +1782,17 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 15px;
 }
-.feed-link a i,
-.chat a i {
-  color: #fc6423;
+.feed-link a .fa,
+.chat a .fa {
+  margin-right: 5px;
 }
 .feed-link a:hover,
 .chat a:hover {
   background: #fc6423;
   color: #fff;
 }
-.feed-link a:hover i,
-.chat a:hover i {
+.feed-link a:hover .fa,
+.chat a:hover .fa {
   color: #fff;
 }
 .links-of-blogroll {
@@ -2758,8 +2759,8 @@ ul.breadcrumb li+li:last-child {
   background: none;
   color: #e34603;
 }
-.feed-link a:hover i,
-.chat a:hover i {
+.feed-link a:hover .fa,
+.chat a:hover .fa {
   color: #e34603;
 }
 .links-of-author {

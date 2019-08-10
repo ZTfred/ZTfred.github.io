@@ -1,49 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[TRUNK和VTP]]></title>
-    <url>%2F2019%2F08%2F05%2FTRUNK%E5%92%8CVTP%2F</url>
-    <content type="text"><![CDATA[交换设备的端口有两种模式： access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan） trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签 开启trunk的步骤： 选择直连两台交换设备其中一个端口，执行 switchport mode trunk VTP（vlan trunk protocol）: vlan中继协议作用：在多台交换机间同步命令：命令 | 翻译 | 作用:-: | :-: | :-:domain | 名称 | 设置vtp的同步名称mode | 模式 | 设置vtp的同步模式password | 密码 | 设置vtp的同步密码version | 版本 | 查看版本 模式：命令 | 翻译 | 作用:-: | :-: | :-:client | 客户模式 | 只能学习，不能管理server | 服务模式 | 可以管理，可以发布transparent | 传输模式 | 只可传输，不会学习]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>TRUNK和VTP</title>
+      <link href="/2019/08/05/TRUNK%E5%92%8CVTP/"/>
+      <url>/2019/08/05/TRUNK%E5%92%8CVTP/</url>
+      
+        <content type="html"><![CDATA[<p>交换设备的端口有两种模式：  </p><ul><li>access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）  </li></ul><ul><li>trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签<a id="more"></a>开启trunk的步骤：  </li></ul><ul><li>选择直连两台交换设备其中一个端口，执行  <pre><code class="bash">switchport mode trunk  </code></pre></li></ul><p>VTP（vlan trunk protocol）: vlan中继协议<br>作用：在多台交换机间同步<br>命令：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>domain | 名称 | 设置vtp的同步名称<br>mode | 模式 | 设置vtp的同步模式<br>password | 密码 | 设置vtp的同步密码<br>version | 版本 | 查看版本</p><p>模式：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>client | 客户模式 | 只能学习，不能管理<br>server | 服务模式 | 可以管理，可以发布<br>transparent | 传输模式 | 只可传输，不会学习</p>]]></content>
+      
+      
       <categories>
-        <category>网络课程</category>
+          
+          <category> 网络课程 </category>
+          
       </categories>
-      <tags>
-        <tag>vtp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[VLAN虚拟局域网]]></title>
-    <url>%2F2019%2F08%2F04%2FVLAN%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91%2F</url>
-    <content type="text"><![CDATA[一.作用可以隔离广播域 二.效果相同vlan可以通信，不同vlan不可通信。 注意判断是否在同一vlan，需要看vlan的ID。 三.管理设备 连线 进入电脑终端 配置设备 符号 模式 作用 进一步 &gt; 用户模式 用于登录设备 可使用enable进入下一个模式 # 特权模式 用于查询设备配置 可使用configure terminal进入下一个模式 (config)# 全局模式 用于配置设备 进行的配置对这个设备生效 四.步骤 添加vlan虚拟局域网 1(config)# vlan2 进入终端设备对应端口 1(config)# interface fastEthernet 0/1 在端口中调用对应vlan 1(config-if)# switchport access vlan 2 退回上级模式 1exit tipsvlan 原理：进入端口贴上标签，出端口前判断标签，出端口后摘掉标签。]]></content>
+      
+      
+        <tags>
+            
+            <tag> vtp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VLAN虚拟局域网</title>
+      <link href="/2019/08/04/VLAN%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
+      <url>/2019/08/04/VLAN%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一-作用"><a href="#一-作用" class="headerlink" title="一.作用"></a>一.作用</h4><p>可以隔离广播域</p><h4 id="二-效果"><a href="#二-效果" class="headerlink" title="二.效果"></a>二.效果</h4><p>相同vlan可以通信，不同vlan不可通信。  </p><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>判断是否在同一vlan，需要看vlan的ID。  </p><a id="more"></a><h4 id="三-管理设备"><a href="#三-管理设备" class="headerlink" title="三.管理设备"></a>三.管理设备</h4><ol><li>连线</li><li>进入电脑终端</li><li>配置设备</li></ol><table><thead><tr><th align="center">符号</th><th align="center">模式</th><th align="center">作用</th><th align="center">进一步</th></tr></thead><tbody><tr><td align="center">&gt;</td><td align="center">用户模式</td><td align="center">用于登录设备</td><td align="center">可使用enable进入下一个模式</td></tr><tr><td align="center">#</td><td align="center">特权模式</td><td align="center">用于查询设备配置</td><td align="center">可使用configure terminal进入下一个模式</td></tr><tr><td align="center">(config)#</td><td align="center">全局模式</td><td align="center">用于配置设备</td><td align="center">进行的配置对这个设备生效</td></tr></tbody></table><h4 id="四-步骤"><a href="#四-步骤" class="headerlink" title="四.步骤"></a>四.步骤</h4><ol><li><p>添加vlan虚拟局域网</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config)<span class="comment"># vlan2</span></span><br></pre></td></tr></table></figure></li><li><p>进入终端设备对应端口</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config)<span class="comment"># interface fastEthernet 0/1</span></span><br></pre></td></tr></table></figure></li><li><p>在端口中调用对应vlan</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(config-if)<span class="comment"># switchport access vlan 2</span></span><br></pre></td></tr></table></figure></li><li><p>退回上级模式</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></li></ol><h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p>vlan 原理：进入端口贴上标签，出端口前判断标签，出端口后摘掉标签。</p>]]></content>
+      
+      
       <categories>
-        <category>网络课程</category>
+          
+          <category> 网络课程 </category>
+          
       </categories>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[arp原理]]></title>
-    <url>%2F2019%2F08%2F03%2F%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%8E%9F%E7%90%86%2F</url>
-    <content type="text"><![CDATA[交换设备属于二层设备，只支持MAC地址。 发送端在与接收端进行数据通信前，需要先知道对端的MAC地址，而首次通信前发送段不知道接收端的MAC地址，所以要发送一个MAC地址请求包，即arp请求包； 该请求包包含发送端的MAC地址，及发送端和接收端的IP地址，经由交换设备换发给接收端；交换机在收到该请求包后，会检测包中包含的目标、地址信息，但目标MAC地址不可用，而IP地址不识别，故交换设备会分发该请求包；除发送端之外的所有设备都会收到该请求包，非目标地址的设备会主动丢弃该请求包；接受端收到请求包后，会将自身的MAC地址写入该请求包，并返回发送端；数据包经由交换设备发送给原发送端，因数据包中包含原发送端的MAC地址，所以会直接转发給原发送端；原发送端收到包含接收端MAC地址的请求包后，会写入本地的arp列表中，以备下次使用；如不包含，则重新开始执行arp请求的过程。 tipsarp列表：MAC与IP地址对应列表。查询命令： 1arp-a 清空命令： 1arp-d]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[计算网段]]></title>
-    <url>%2F2019%2F08%2F02%2F%E7%BD%91%E6%AE%B5%2F</url>
-    <content type="text"><![CDATA[将十进制转换成二进制； 将转换的IP和掩码对位相乘； 将相乘的结果转换成十进制； 对比十进制是否相同即可判断是否为相同网段。]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[OSI七层模型]]></title>
-    <url>%2F2019%2F08%2F01%2FOSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[下图为模型结构图： 1.物理层传输媒介，在线路中起到的作用是将二进制转换成电信号或光信号。 2.数据链路层例如MAC地址。作用是相邻的两个设备之间的互相通信。 3.网络层IP地址。作用是寻址，让数据包找到最终地址。 4.传输层TCP/UDP。用于建立以及断开链接。 5.会话层传输层的领导，管理传输层的建立连接和断开。 6.表示层将应用层协议翻译成电脑可识别的语言，如UTF-8。 7.应用层每个网络应用，都对应不同的协议，这些协议属于应用层。 tips数据在发送时，由第七层至第一层进行封装，目标在收到数据包后，由第一层至第一层解封。]]></content>
-      <tags>
-        <tag>网络</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>arp原理</title>
+      <link href="/2019/08/03/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%8E%9F%E7%90%86/"/>
+      <url>/2019/08/03/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p><strong>交换设备属于二层设备，只支持MAC地址。</strong>  </p><p>发送端在与接收端进行数据通信前，需要先知道对端的MAC地址，而首次通信前发送段不知道接收端的MAC地址，所以要发送一个MAC地址请求包，即arp请求包；  </p><a id="more"></a><p>该请求包包含发送端的MAC地址，及发送端和接收端的IP地址，经由交换设备换发给接收端；<br>交换机在收到该请求包后，会检测包中包含的目标、地址信息，但目标MAC地址不可用，而IP地址不识别，故交换设备会分发该请求包；<br>除发送端之外的所有设备都会收到该请求包，非目标地址的设备会主动丢弃该请求包；<br>接受端收到请求包后，会将自身的MAC地址写入该请求包，并返回发送端；<br>数据包经由交换设备发送给原发送端，因数据包中包含原发送端的MAC地址，所以会直接转发給原发送端；<br>原发送端收到包含接收端MAC地址的请求包后，会写入本地的arp列表中，以备下次使用；<br>如不包含，则重新开始执行arp请求的过程。  </p><hr><h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a><em>tips</em></h4><p>arp列表：MAC与IP地址对应列表。<br>查询命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arp<span class="_">-a</span></span><br></pre></td></tr></table></figure><p>清空命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arp<span class="_">-d</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算网段</title>
+      <link href="/2019/08/02/%E7%BD%91%E6%AE%B5/"/>
+      <url>/2019/08/02/%E7%BD%91%E6%AE%B5/</url>
+      
+        <content type="html"><![CDATA[<ol><li>将十进制转换成二进制；  </li><li>将转换的IP和掩码对位相乘；  </li><li>将相乘的结果转换成十进制；  </li><li>对比十进制是否相同即可判断是否为相同网段。</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OSI七层模型</title>
+      <link href="/2019/08/01/OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/"/>
+      <url>/2019/08/01/OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<p>下图为模型结构图：</p><p><img src="https://i.loli.net/2019/08/08/ODS2wIheP1fmG3p.png" alt></p><h3 id="1-物理层"><a href="#1-物理层" class="headerlink" title="1.物理层"></a>1.物理层</h3><p>传输媒介，在线路中起到的作用是将二进制转换成电信号或光信号。</p><h3 id="2-数据链路层"><a href="#2-数据链路层" class="headerlink" title="2.数据链路层"></a>2.数据链路层</h3><p>例如MAC地址。作用是相邻的两个设备之间的互相通信。</p><a id="more"></a><h3 id="3-网络层"><a href="#3-网络层" class="headerlink" title="3.网络层"></a>3.网络层</h3><p>IP地址。作用是寻址，让数据包找到最终地址。</p><h3 id="4-传输层"><a href="#4-传输层" class="headerlink" title="4.传输层"></a>4.传输层</h3><p>TCP/UDP。用于建立以及断开链接。</p><h3 id="5-会话层"><a href="#5-会话层" class="headerlink" title="5.会话层"></a>5.会话层</h3><p>传输层的领导，管理传输层的建立连接和断开。</p><h3 id="6-表示层"><a href="#6-表示层" class="headerlink" title="6.表示层"></a>6.表示层</h3><p>将应用层协议翻译成电脑可识别的语言，如UTF-8。</p><h3 id="7-应用层"><a href="#7-应用层" class="headerlink" title="7.应用层"></a>7.应用层</h3><p>每个网络应用，都对应不同的协议，这些协议属于应用层。</p><h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a><em>tips</em></h3><p>数据在发送时，由第七层至第一层进行封装，目标在收到数据包后，由第一层至第一层解封。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
