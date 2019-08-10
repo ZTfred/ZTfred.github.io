@@ -67,7 +67,7 @@
 <meta property="og:site_name" content="生活">
 <meta property="og:description" content="交换设备的端口有两种模式：    access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）     trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-10T06:07:39.140Z">
+<meta property="og:updated_time" content="2019-08-10T09:08:03.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TRUNK和VTP">
 <meta name="twitter:description" content="交换设备的端口有两种模式：    access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan）     trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签">
@@ -328,10 +328,11 @@
 开启trunk的步骤：  </li>
 </ul>
 <ul>
-<li>选择直连两台交换设备其中一个端口，执行  <pre><code class="bash">switchport mode trunk  </code></pre>
+<li>选择直连两台交换设备其中一个端口，执行  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">switchport mode trunk</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>VTP（vlan trunk protocol）: vlan中继协议<br>作用：在多台交换机间同步<br>命令：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>domain | 名称 | 设置vtp的同步名称<br>mode | 模式 | 设置vtp的同步模式<br>password | 密码 | 设置vtp的同步密码<br>version | 版本 | 查看版本</p>
+<p>VTP（vlan trunk protocol）: vlan中继协议<br>作用：在多台交换机间同步<br>命令：<br>| 命令 | 翻译 | 作用 |<br>| :-: | :-: | :-: |<br>| domain | 名称 | 设置vtp的同步名称 |<br>| mode | 模式 | 设置vtp的同步模式 |<br>| password | 密码 | 设置vtp的同步密码 |<br>| version | 版本 | 查看版本 |</p>
 <p>模式：<br>命令 | 翻译 | 作用<br>:-: | :-: | :-:<br>client | 客户模式 | 只能学习，不能管理<br>server | 服务模式 | 可以管理，可以发布<br>transparent | 传输模式 | 只可传输，不会学习</p>
 
     </div>
