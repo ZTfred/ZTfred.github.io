@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[TRUNK和VTP]]></title>
-    <url>%2F2019%2F08%2F09%2FTRUNK%E5%92%8CVTP%2F</url>
+    <url>%2F2019%2F08%2F05%2FTRUNK%E5%92%8CVTP%2F</url>
     <content type="text"><![CDATA[交换设备的端口有两种模式： access模式：进入带上标签，出去前判断标签，出去后摘掉标签（vlan） trunk模式：终端不会直连，出去前不判断标签，出去后不摘掉标签 开启trunk的步骤： 选择直连两台交换设备其中一个端口，执行 switchport mode trunk VTP（vlan trunk protocol）: vlan中继协议作用：在多台交换机间同步命令：命令 | 翻译 | 作用:-: | :-: | :-:domain | 名称 | 设置vtp的同步名称mode | 模式 | 设置vtp的同步模式password | 密码 | 设置vtp的同步密码version | 版本 | 查看版本 模式：命令 | 翻译 | 作用:-: | :-: | :-:client | 客户模式 | 只能学习，不能管理server | 服务模式 | 可以管理，可以发布transparent | 传输模式 | 只可传输，不会学习]]></content>
       <categories>
         <category>网络课程</category>
