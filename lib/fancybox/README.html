@@ -35,8 +35,8 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
+    save_scroll: true,
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
     fancybox: true,
     mediumzoom: false,
     lazyload: false,
@@ -159,6 +159,8 @@
         <li class="menu-item menu-item-home">
       
     
+      
+    
 
     <a rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
@@ -170,8 +172,10 @@
         <li class="menu-item menu-item-tags">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
       
@@ -181,8 +185,10 @@
         <li class="menu-item menu-item-categories">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
 
   </li>
       
@@ -192,8 +198,10 @@
         <li class="menu-item menu-item-archives">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -522,6 +530,11 @@
       </span>
     
   </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="../images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -606,6 +619,11 @@
 
     
   
+  <div id="needsharebutton-float">
+    <span class="btn">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </span>
+  </div>
 <script src="../lib/needsharebutton/needsharebutton.js"></script>
 <script>
     pbOptions = {};
@@ -618,6 +636,16 @@
       pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
     
     new needShareButton('#needsharebutton-postbottom', pbOptions);
+    flOptions = {};
+      flOptions.iconStyle = "box";
+    
+      flOptions.boxForm = "horizontal";
+    
+      flOptions.position = "middleRight";
+    
+      flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+    
+    new needShareButton('#needsharebutton-float', flOptions);
 </script>
 
 

@@ -35,8 +35,8 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
+    save_scroll: true,
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
     fancybox: true,
     mediumzoom: false,
     lazyload: false,
@@ -160,6 +160,8 @@
         <li class="menu-item menu-item-home">
       
     
+      
+    
 
     <a rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
@@ -171,8 +173,10 @@
         <li class="menu-item menu-item-tags">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
       
@@ -182,8 +186,10 @@
         <li class="menu-item menu-item-categories">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
 
   </li>
       
@@ -193,8 +199,10 @@
         <li class="menu-item menu-item-archives">
       
     
+      
+    
 
-    <a rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -336,6 +344,22 @@
 	
 	</div>
         
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>fred</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/08/03/交换机原理/" title="arp原理">http://yoursite.com/2019/08/03/交换机原理/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
+
       
 
       <footer class="post-footer">
@@ -509,6 +533,11 @@
       </span>
     
   </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="../images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -593,6 +622,11 @@
 
     
   
+  <div id="needsharebutton-float">
+    <span class="btn">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </span>
+  </div>
 <script src="../lib/needsharebutton/needsharebutton.js"></script>
 <script>
     pbOptions = {};
@@ -605,6 +639,16 @@
       pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
     
     new needShareButton('#needsharebutton-postbottom', pbOptions);
+    flOptions = {};
+      flOptions.iconStyle = "box";
+    
+      flOptions.boxForm = "horizontal";
+    
+      flOptions.position = "middleRight";
+    
+      flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+    
+    new needShareButton('#needsharebutton-float', flOptions);
 </script>
 
 
